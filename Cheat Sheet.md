@@ -126,35 +126,55 @@ GPIOB->ODR |= (0x01 << 3); // set PB3 to pull-up
 ### LED0 (PB5)
 ```
 GPIOB->ODR |= (0x01 << 5); // turn LED0 on
+```
+```
 GPIOB->ODR &= ~(0x01 << 5); // turn LED0 off
+```
+```
 GPIOB->ODR ^= (0x01 << 5); // toggle LED0
 ```
 
 ### LED1 (PB10)
 ```
 GPIOB->ODR |= (0x01 << 10); // turn LED1 on
+```
+```
 GPIOB->ODR &= ~(0x01 << 10); // turn LED1 off
+```
+```
 GPIOB->ODR ^= (0x01 << 10); // toggle LED1
 ```
 
 ### LED2 (PC7)
 ```
 GPIOC->ODR |= (0x01 << 7); // turn LED2 on
+```
+```
 GPIOC->ODR &= ~(0x01 << 7); // turn LED2 off
+```
+```
 GPIOC->ODR ^= (0x01 << 7); // toggle LED2
 ```
 
 ### LED3 (PB9)
 ```
 GPIOB->ODR |= (0x01 << 9); // turn LED3 on
+```
+```
 GPIOB->ODR &= ~(0x01 << 9); // turn LED3 off
+```
+```
 GPIOB->ODR ^= (0x01 << 9); // toggle LED3
 ```
 
 ### LED4 (PB8)
 ```
 GPIOB->ODR |= (0x01 << 8); // turn LED4 on
+```
+```
 GPIOB->ODR &= ~(0x01 << 8); // turn LED4 off
+```
+```
 GPIOB->ODR ^= (0x01 << 8); // toggle LED4
 ```
 &nbsp;
