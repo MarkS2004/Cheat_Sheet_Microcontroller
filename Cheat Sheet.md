@@ -1,5 +1,6 @@
 # Table of contents
 - [Table of contents](#table-of-contents)
+- [Quicklinks](#quicklinks)
 - [Overview of components](#overview-of-components)
 - [Enable Ports](#enable-ports)
   - [Enable Port A](#enable-port-a)
@@ -23,6 +24,12 @@
   - [Check SW1 (PA10)](#check-sw1-pa10)
   - [Check SW2 (PB3)](#check-sw2-pb3)
 
+# Quicklinks
+- [GitLab-Wiki](https://gitlab.com/HaraldLytentec/ucdhbwfn23/-/wikis/home) (Authentication required)
+- [Reference Manual](https://www.st.com/resource/en/reference_manual/cd00171190.pdf)
+- [Datasheet](https://www.st.com/resource/en/datasheet/stm32f103rb.pdf)
+- [Notes on the development system](https://gitlab.com/HaraldLytentec/ucdhbwfn23/-/wikis/Hinweise%20zum%20Entwicklungssystem) (Authentication required)
+&nbsp;
 
 # Overview of components
 | Name in circuit diagram | Name on Board | Port & Pin |
