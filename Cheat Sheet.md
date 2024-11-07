@@ -154,9 +154,8 @@ GPIOC->ODR ^= (0x01 << 7); // toggle LED2
 ```
 
 ## Controll LED3 (PB9)
-```
-GPIOB->ODR |= (0x01 << 9); // turn LED3 on
-```
+`GPIOB->ODR |= (0x01 << 9); // turn LED3 on
+`
 ```
 GPIOB->ODR &= ~(0x01 << 9); // turn LED3 off
 ```
