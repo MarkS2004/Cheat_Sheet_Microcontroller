@@ -1,6 +1,5 @@
 # Table of contents
 - [Table of contents](#table-of-contents)
-- [Basics](#basics)
 - [Components](#components)
 - [In- and Outputs](#in--and-outputs)
   - [Enable Ports](#enable-ports)
@@ -26,7 +25,6 @@
     - [SW1 (PA10)](#sw1-pa10-1)
     - [SW2 (PB3)](#sw2-pb3-1)
 
-# Basics
 
 # Components
 | Name in circuit diagram | Name on Board | Port & Pin |
