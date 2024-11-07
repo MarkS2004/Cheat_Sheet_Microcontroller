@@ -6,7 +6,6 @@
   - [Enable Ports](#enable-ports)
     - [Port A](#port-a)
     - [Port B](#port-b)
-      - [Fix PB3, disable configuration for Debug](#fix-pb3-disable-configuration-for-debug)
     - [Port C](#port-c)
     - [Port A, B \& C](#port-a-b--c)
   - [Set mode of pins](#set-mode-of-pins)
@@ -23,6 +22,9 @@
     - [LED2 (PC7)](#led2-pc7-1)
     - [LED3 (PB9)](#led3-pb9-1)
     - [LED4 (PB8)](#led4-pb8-1)
+  - [Check if button is pressed](#check-if-button-is-pressed)
+    - [SW1 (PA10)](#sw1-pa10-1)
+    - [SW2 (PB3)](#sw2-pb3-1)
 
 # Basics
 
@@ -52,7 +54,7 @@ RCC->APB2ENR |= (0x01 << 2); // enable PortA
 RCC->APB2ENR |= (0x01 << 3); // enable PortB
 ```
 
-#### Fix PB3, disable configuration for Debug
+Fix PB3, disable configuration for Debug:
 ```
 RCC->APB2ENR |= RCC_APB2ENR_AFIOEN;
 AFIO->MAPR &= ~AFIO_MAPR_SWJ_CFG;
@@ -155,3 +157,23 @@ GPIOB->ODR |= (0x01 << 8); // turn LED4 on
 GPIOB->ODR &= ~(0x01 << 8); // turn LED4 off
 GPIOB->ODR ^= (0x01 << 8); // toggle LED4
 ```
+&nbsp;
+
+## Check if button is pressed
+
+### SW1 (PA10)
+```
+if ((GPIOA->IDR & (0x01 << 10)) == 0) // Check if SW1 is pressed
+{
+
+}
+```
+
+### SW2 (PB3)
+```
+//	if ((GPIOB->IDR & (0x01 << 3)) == 0)  // Check if SWe is pressed
+{
+
+}
+```
+&nbsp;
