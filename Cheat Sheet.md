@@ -36,6 +36,7 @@
 | LED4 | D4 | PB8 |
 | SW1 | SW1 | PA10 |
 | SW2 | SW2 | PB3 |
+
 &nbsp;
 
 # In- and Outputs
