@@ -268,7 +268,7 @@ if ((GPIOB->IDR & (0x01 << 3)) == 0)  // Check if SW2 is pressed
 	GPIOB->ODR |= (0x01 << 0); // controll S1
 ```
 ```
-	GPIOB->ODR &= ~(0x01 << 0); // controll S1
+	GPIOB->ODR &= ~(0x01 << 0); // controll S2
 ```
 
 ## Controll 7Seg_A
