@@ -14,6 +14,13 @@
   - [Configure LED4 (PB8)](#configure-led4-pb8)
   - [Configure SW1 (PA10)](#configure-sw1-pa10)
   - [Configure SW2 (PB3)](#configure-sw2-pb3)
+  - [Configure 7SEG\_A (PA5)](#configure-7seg_a-pa5)
+  - [Configure 7SEG\_B (PA6)](#configure-7seg_b-pa6)
+  - [Configure 7SEG\_C (PA7)](#configure-7seg_c-pa7)
+  - [Configure 7SEG\_D (PA8)](#configure-7seg_d-pa8)
+  - [Configure 7SEG\_E (PA9)](#configure-7seg_e-pa9)
+  - [Configure 7SEG\_F (PC0)](#configure-7seg_f-pc0)
+  - [Configure 7SEG\_G (PC1)](#configure-7seg_g-pc1)
 - [Control LEDs](#control-leds)
   - [Control LED0 (PB5)](#control-led0-pb5)
   - [Control LED1 (PB10)](#control-led1-pb10)
@@ -23,6 +30,15 @@
 - [Check button inputs](#check-button-inputs)
   - [Check SW1 (PA10)](#check-sw1-pa10)
   - [Check SW2 (PB3)](#check-sw2-pb3)
+- [Control 7-Segment-Display](#control-7-segment-display)
+  - [Switch between S1 and S2](#switch-between-s1-and-s2)
+  - [Controll 7Seg\_A](#controll-7seg_a)
+  - [Controll 7Seg\_B](#controll-7seg_b)
+  - [Controll 7Seg\_C](#controll-7seg_c)
+  - [Controll 7Seg\_D](#controll-7seg_d)
+  - [Controll 7Seg\_E](#controll-7seg_e)
+  - [Controll 7Seg\_F](#controll-7seg_f)
+  - [Controll 7Seg\_G](#controll-7seg_g)
 
 # Quicklinks
 - [GitLab-Wiki](https://gitlab.com/HaraldLytentec/ucdhbwfn23/-/wikis/home) (Authentication required)
@@ -123,6 +139,48 @@ GPIOB->CRL &= ~(0x0F << (4 * 3)); // clear control register of PB3
 GPIOB->CRL |= (0x08 << (4 * 3)); // set PB3 as input with pull-up / pull-down
 GPIOB->ODR |= (0x01 << 3); // set PB3 to pull-up
 ```
+
+## Configure 7SEG_A (PA5)
+```
+GPIOB->CRL &= ~(0x0F << (4 * 5)); // clear control register of PA5
+GPIOB->CRL |= (0x02 << (4 * 5)); // set PA5 as output Push-pull, 2MHz
+```
+
+## Configure 7SEG_B (PA6)
+```
+GPIOB->CRL &= ~(0x0F << (4 * 6)); // clear control register of PA6
+GPIOB->CRL |= (0x02 << (4 * 6)); // set PA6 as output Push-pull, 2MHz
+```
+
+## Configure 7SEG_C (PA7)
+```
+GPIOB->CRL &= ~(0x0F << (4 * 7)); // clear control register of PA7
+GPIOB->CRL |= (0x02 << (4 * 7)); // set PA7 as output Push-pull, 2MHz
+```
+
+## Configure 7SEG_D (PA8)
+```
+GPIOB->CRH &= ~(0x0F << (4 * 0)); // clear control register of PA8
+GPIOB->CRH |= (0x02 << (4 * 0)); // set PA8 as output Push-pull, 2MHz
+```
+
+## Configure 7SEG_E (PA9)
+```
+GPIOB->CRH &= ~(0x0F << (4 * 1)); // clear control register of PA8
+GPIOB->CRH |= (0x02 << (4 * 1)); // set PA8 as output Push-pull, 2MHz
+```
+
+## Configure 7SEG_F (PC0)
+```
+GPIOC->CRL &= ~(0x0F << (4 * 0)); // clear control register of PA8
+GPIOC->CRL |= (0x02 << (4 * 0)); // set PA8 as output Push-pull, 2MHz
+```
+
+## Configure 7SEG_G (PC1)
+```
+GPIOC->CRL &= ~(0x0F << (4 * 1)); // clear control register of PA8
+GPIOC->CRL |= (0x02 << (4 * 1)); // set PA8 as output Push-pull, 2MHz
+```
 &nbsp;
 
 
@@ -202,3 +260,69 @@ if ((GPIOB->IDR & (0x01 << 3)) == 0)  // Check if SW2 is pressed
 }
 ```
 &nbsp;
+
+# Control 7-Segment-Display
+
+## Switch between S1 and S2
+```
+	GPIOB->ODR |= (0x01 << 0); // controll S1
+```
+```
+	GPIOB->ODR &= ~(0x01 << 0); // controll S1
+```
+
+## Controll 7Seg_A
+```
+	GPIOA->ODR &= ~(0x01 << 5); // turn SegA of S1 on
+```
+```
+	GPIOA->ODR |= (0x01 << 5); // turn SegA of S2 on
+```
+
+## Controll 7Seg_B
+```
+	GPIOA->ODR &= ~(0x01 << 6); // turn SegB of S1 on
+```
+```
+	GPIOA->ODR |= (0x01 << 6); // turn SegB of S2 on
+```
+
+## Controll 7Seg_C
+```
+	GPIOA->ODR &= ~(0x01 << 7); // turn SegC of S1 on
+```
+```
+	GPIOA->ODR |= (0x01 << 7); // turn SegC of S2 on
+```
+
+## Controll 7Seg_D
+```
+	GPIOA->ODR &= ~(0x01 << 8); // turn SegD of S1 on
+```
+```
+	GPIOA->ODR |= (0x01 << 8); // turn SegD of S2 on
+```
+
+## Controll 7Seg_E
+```
+	GPIOA->ODR &= ~(0x01 << 9); // turn SegE of S1 on
+```
+```
+	GPIOA->ODR |= (0x01 << 9); // turn SegE of S2 on
+```
+
+## Controll 7Seg_F
+```
+	GPIOC->ODR &= ~(0x01 << 0); // turn SegF of S1 on
+```
+```
+	GPIOC->ODR |= (0x01 << 0); // turn SegF of S2 on
+```
+
+## Controll 7Seg_G
+```
+	GPIOC->ODR &= ~(0x01 << 1); // turn SegG of S1 on
+```
+```
+	GPIOC->ODR |= (0x01 << 1); // turn SegG of S2 on
+```
