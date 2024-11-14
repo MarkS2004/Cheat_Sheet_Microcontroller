@@ -142,32 +142,32 @@ GPIOB->ODR |= (0x01 << 3); // set PB3 to pull-up
 
 ## Configure 7SEG_A (PA5)
 ```
-GPIOB->CRL &= ~(0x0F << (4 * 5)); // clear control register of PA5
-GPIOB->CRL |= (0x02 << (4 * 5)); // set PA5 as output Push-pull, 2MHz
+GPIOA>CRL &= ~(0x0F << (4 * 5)); // clear control register of PA5
+GPIOA->CRL |= (0x02 << (4 * 5)); // set PA5 as output Push-pull, 2MHz
 ```
 
 ## Configure 7SEG_B (PA6)
 ```
-GPIOB->CRL &= ~(0x0F << (4 * 6)); // clear control register of PA6
-GPIOB->CRL |= (0x02 << (4 * 6)); // set PA6 as output Push-pull, 2MHz
+GPIOA->CRL &= ~(0x0F << (4 * 6)); // clear control register of PA6
+GPIOA->CRL |= (0x02 << (4 * 6)); // set PA6 as output Push-pull, 2MHz
 ```
 
 ## Configure 7SEG_C (PA7)
 ```
-GPIOB->CRL &= ~(0x0F << (4 * 7)); // clear control register of PA7
-GPIOB->CRL |= (0x02 << (4 * 7)); // set PA7 as output Push-pull, 2MHz
+GPIOA->CRL &= ~(0x0F << (4 * 7)); // clear control register of PA7
+GPIOA->CRL |= (0x02 << (4 * 7)); // set PA7 as output Push-pull, 2MHz
 ```
 
 ## Configure 7SEG_D (PA8)
 ```
-GPIOB->CRH &= ~(0x0F << (4 * 0)); // clear control register of PA8
-GPIOB->CRH |= (0x02 << (4 * 0)); // set PA8 as output Push-pull, 2MHz
+GPIOA->CRH &= ~(0x0F << (4 * 0)); // clear control register of PA8
+GPIOA->CRH |= (0x02 << (4 * 0)); // set PA8 as output Push-pull, 2MHz
 ```
 
 ## Configure 7SEG_E (PA9)
 ```
-GPIOB->CRH &= ~(0x0F << (4 * 1)); // clear control register of PA8
-GPIOB->CRH |= (0x02 << (4 * 1)); // set PA8 as output Push-pull, 2MHz
+GPIOA->CRH &= ~(0x0F << (4 * 1)); // clear control register of PA8
+GPIOA->CRH |= (0x02 << (4 * 1)); // set PA8 as output Push-pull, 2MHz
 ```
 
 ## Configure 7SEG_F (PC0)
