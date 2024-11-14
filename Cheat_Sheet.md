@@ -188,7 +188,7 @@ if ((GPIOA->IDR & (0x01 << 10)) == 0) // Check if SW1 is pressed
 
 ## Check SW2 (PB3)
 ```
-//	if ((GPIOB->IDR & (0x01 << 3)) == 0)  // Check if SW2 is pressed
+if ((GPIOB->IDR & (0x01 << 3)) == 0)  // Check if SW2 is pressed
 {
 
 }
