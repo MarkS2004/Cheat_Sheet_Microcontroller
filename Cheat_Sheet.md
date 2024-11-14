@@ -142,7 +142,7 @@ GPIOB->ODR |= (0x01 << 3); // set PB3 to pull-up
 
 ## Configure 7SEG_A (PA5)
 ```
-GPIOA>CRL &= ~(0x0F << (4 * 5)); // clear control register of PA5
+GPIOA->CRL &= ~(0x0F << (4 * 5)); // clear control register of PA5
 GPIOA->CRL |= (0x02 << (4 * 5)); // set PA5 as output Push-pull, 2MHz
 ```
 
