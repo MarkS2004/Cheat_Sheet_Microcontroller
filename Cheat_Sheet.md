@@ -41,6 +41,14 @@
 | LED4 | D4 | PB8 |
 | SW1 | SW1 | PA10 |
 | SW2 | SW2 | PB3 |
+| SEGA | Segm_A | PA5 |
+| SEGB | Segm_B | PA6 |
+| SEGC | Segm_C | PA7 |
+| SEGD | Segm_D | PA8 |
+| SEGE | Segm_E | PA9 |
+| SEGF | Segm_F | PC0 |
+| SEGG | Segm_G | PC1 |
+| COMMON | Seg_Common | PB0 |
 
 &nbsp;
 
