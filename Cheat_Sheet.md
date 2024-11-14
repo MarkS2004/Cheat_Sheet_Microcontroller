@@ -14,12 +14,12 @@
   - [Configure LED4 (PB8)](#configure-led4-pb8)
   - [Configure SW1 (PA10)](#configure-sw1-pa10)
   - [Configure SW2 (PB3)](#configure-sw2-pb3)
-- [Controll LEDs](#controll-leds)
-  - [Controll LED0 (PB5)](#controll-led0-pb5)
-  - [Controll LED1 (PB10)](#controll-led1-pb10)
-  - [Controll LED2 (PC7)](#controll-led2-pc7)
-  - [Controll LED3 (PB9)](#controll-led3-pb9)
-  - [Controll LED4 (PB8)](#controll-led4-pb8)
+- [Control LEDs](#control-leds)
+  - [Control LED0 (PB5)](#control-led0-pb5)
+  - [Control LED1 (PB10)](#control-led1-pb10)
+  - [Control LED2 (PC7)](#control-led2-pc7)
+  - [Control LED3 (PB9)](#control-led3-pb9)
+  - [Control LED4 (PB8)](#control-led4-pb8)
 - [Check button inputs](#check-button-inputs)
   - [Check SW1 (PA10)](#check-sw1-pa10)
   - [Check SW2 (PB3)](#check-sw2-pb3)
@@ -118,9 +118,9 @@ GPIOB->ODR |= (0x01 << 3); // set PB3 to pull-up
 &nbsp;
 
 
-# Controll LEDs
+# Control LEDs
 
-## Controll LED0 (PB5)
+## Control LED0 (PB5)
 ```
 GPIOB->ODR |= (0x01 << 5); // turn LED0 on
 ```
@@ -131,7 +131,7 @@ GPIOB->ODR &= ~(0x01 << 5); // turn LED0 off
 GPIOB->ODR ^= (0x01 << 5); // toggle LED0
 ```
 
-## Controll LED1 (PB10)
+## Control LED1 (PB10)
 ```
 GPIOB->ODR |= (0x01 << 10); // turn LED1 on
 ```
@@ -142,7 +142,7 @@ GPIOB->ODR &= ~(0x01 << 10); // turn LED1 off
 GPIOB->ODR ^= (0x01 << 10); // toggle LED1
 ```
 
-## Controll LED2 (PC7)
+## Control LED2 (PC7)
 ```
 GPIOC->ODR |= (0x01 << 7); // turn LED2 on
 ```
@@ -153,7 +153,7 @@ GPIOC->ODR &= ~(0x01 << 7); // turn LED2 off
 GPIOC->ODR ^= (0x01 << 7); // toggle LED2
 ```
 
-## Controll LED3 (PB9)
+## Control LED3 (PB9)
 ```
 GPIOB->ODR |= (0x01 << 9); // turn LED3 on
 ```
@@ -164,7 +164,7 @@ GPIOB->ODR &= ~(0x01 << 9); // turn LED3 off
 GPIOB->ODR ^= (0x01 << 9); // toggle LED3
 ```
 
-## Controll LED4 (PB8)
+## Control LED4 (PB8)
 ```
 GPIOB->ODR |= (0x01 << 8); // turn LED4 on
 ```
