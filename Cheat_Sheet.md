@@ -21,7 +21,7 @@
   - [Configure 7SEG\_E (PA9)](#configure-7seg_e-pa9)
   - [Configure 7SEG\_F (PC0)](#configure-7seg_f-pc0)
   - [Configure 7SEG\_G (PC1)](#configure-7seg_g-pc1)
-  - [Configure 7SEG\_COM (PB0)](##configure-7seg_g-pb0)
+  - [Configure 7SEG\_COM (PB0)](##configure-7seg_com-pb0)
 - [Control LEDs](#control-leds)
   - [Control LED0 (PB5)](#control-led0-pb5)
   - [Control LED1 (PB10)](#control-led1-pb10)
@@ -185,8 +185,8 @@ GPIOC->CRL |= (0x02 << (4 * 1)); // set PA8 as output Push-pull, 2MHz
 
 ## Configure 7SEG_COM (PB0)
 ```
-GPIOC->CRL &= ~(0x0F << (4 * 0)); // clear control register of PB0
-GPIOC->CRL |= (0x02 << (4 * 0)); // set PB0 as output Push-pull, 2MHz
+GPIOB->CRL &= ~(0x0F << (4 * 0)); // clear control register of PB0
+GPIOB->CRL |= (0x02 << (4 * 0)); // set PB0 as output Push-pull, 2MHz
 ```
 &nbsp;
 
